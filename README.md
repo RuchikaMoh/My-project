@@ -1,61 +1,71 @@
-# 🚀 Getting started with Strapi
+# Strapi Article Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Overview
+This project demonstrates setting up Strapi locally using the official Strapi repository, creating a sample content type, and exposing it via a public API.
 
-### `develop`
+## Prerequisites
+- Node.js (v18 or v20)
+- npm
+- Git
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Steps Followed
 
-```
+### 1. Clone the Strapi Repository
+```bash
+git clone https://github.com/strapi/strapi.git
+cd strapi
+
+2. Install Dependencies
+npm install
+
+3. Run Strapi Locally
 npm run develop
-# or
-yarn develop
-```
 
-### `start`
+Strapi Admin Panel runs at:
+http://localhost:1337/admin
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+4. Create Content Type
 
-```
-npm run start
-# or
-yarn start
-```
+Using the Content-Type Builder, a collection type Article was created with the following fields:
 
-### `build`
+title (Text)
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+content (Rich Text / Blocks)
 
-```
-npm run build
-# or
-yarn build
-```
+published (Boolean)
 
-## ⚙️ Deployment
+5. Create Sample Content
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+A sample Article entry was created in the Content Manager and published.
 
-```
-yarn strapi deploy
-```
+6. Enable Public API Access
 
-## 📚 Learn more
+Public role permissions were updated to allow:
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+find
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+findOne
 
-## ✨ Community
+7. Verify API
+GET http://localhost:1337/api/articles
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+
+The endpoint successfully returns article data in JSON format.
+
+Loom Video
+
+(Add Loom link here)
+
+
+Save the file.
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+### 2️⃣ Commit the README update
+Run:
+
+```bash
+git status
+git add README.md
+git commit -m "Update README with Strapi setup steps"
+git push
