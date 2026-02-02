@@ -1,45 +1,45 @@
-Strapi Article Setup
+# Strapi Article Setup
 
-Overview  
-This project demonstrates setting up Strapi locally using the official Strapi repository,
-creating a sample content type, and exposing it via a public API.
+## Overview
+This project shows how to run Strapi locally, create a sample content type,
+and expose it using the public API.
 
-Prerequisites
+## Prerequisites
 - Node.js (v18 or v20)
 - npm
 - Git
 
-Steps Followed
+## Steps Followed
 
-1. Clone the Strapi Repository  
-git clone https://github.com/strapi/strapi.git  
-cd strapi  
+### 1. Run Strapi Locally
+Install dependencies and start the project:
 
-2. Install Dependencies  
 npm install  
-
-3. Run Strapi Locally  
 npm run develop  
 
-Admin Panel:
+Admin Panel URL:  
 http://localhost:1337/admin
 
-4. Create Content Type  
-Article collection type with fields:
+### 2. Create Content Type
+A collection type named **Article** was created with the following fields:
 - title (Text)
 - content (Rich Text / Blocks)
 - published (Boolean)
 
-5. Create Sample Content  
-One sample Article entry was created and published.
+### 3. Create Sample Content
+A sample Article entry was added and published from the Content Manager.
 
-6. Enable Public API Access  
-Permissions enabled:
+### 4. Enable Public API Access
+Public role permissions were enabled for:
 - find
 - findOne
 
-7. Verify API  
+### 5. Verify API
+The API endpoint was tested:
+
 GET http://localhost:1337/api/articles
 
-Loom Video  
+The endpoint returns article data in JSON format.
+
+## Loom Video
 (Add Loom link here)
