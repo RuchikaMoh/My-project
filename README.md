@@ -1,4 +1,6 @@
 # Strapi Article Setup
+This project includes an Article content type created using Strapi.
+
 
 ## Overview
 This project shows how to run Strapi locally, create a sample content type,
