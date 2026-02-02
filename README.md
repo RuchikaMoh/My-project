@@ -42,4 +42,4 @@ GET http://localhost:1337/api/articles
 The endpoint returns article data in JSON format.
 
 ## Loom Video
-(Add Loom link here)
+https://www.loom.com/share/83a3d36b55dc42bb879ccd8e3ed885d3
