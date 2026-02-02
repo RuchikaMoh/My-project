@@ -1,61 +1,45 @@
-# 🚀 Getting started with Strapi
+Strapi Article Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Overview  
+This project demonstrates setting up Strapi locally using the official Strapi repository,
+creating a sample content type, and exposing it via a public API.
 
-### `develop`
+Prerequisites
+- Node.js (v18 or v20)
+- npm
+- Git
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Steps Followed
 
-```
-npm run develop
-# or
-yarn develop
-```
+1. Clone the Strapi Repository  
+git clone https://github.com/strapi/strapi.git  
+cd strapi  
 
-### `start`
+2. Install Dependencies  
+npm install  
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+3. Run Strapi Locally  
+npm run develop  
 
-```
-npm run start
-# or
-yarn start
-```
+Admin Panel:
+http://localhost:1337/admin
 
-### `build`
+4. Create Content Type  
+Article collection type with fields:
+- title (Text)
+- content (Rich Text / Blocks)
+- published (Boolean)
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+5. Create Sample Content  
+One sample Article entry was created and published.
 
-```
-npm run build
-# or
-yarn build
-```
+6. Enable Public API Access  
+Permissions enabled:
+- find
+- findOne
 
-## ⚙️ Deployment
+7. Verify API  
+GET http://localhost:1337/api/articles
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Loom Video  
+(Add Loom link here)
